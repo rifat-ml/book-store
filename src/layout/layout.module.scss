@@ -24,19 +24,21 @@
 .search {
   position: relative;
   .input {
-    width: 376px;
     height: 36px;
     border-radius: 2px;
     background: #f1f1f1;
     text-indent: 16px;
-    
-    @include media-breakpoint-down(1100px) {
-      width: 320px;
-    }
 
-    @include media-breakpoint-down(1024px) {
+    @include media-breakpoint-up($sm) {
       width: 220px;
     }
+
+    @include media-breakpoint-up(1100px) {
+      width: 376px;
+    }
+
+    // @include media-breakpoint-between($sm, 940px) {
+    // }
   }
   .icon {
     position: absolute;

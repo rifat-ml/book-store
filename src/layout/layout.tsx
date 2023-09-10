@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               We love books
             </span>
           </div>
-          <div className="flex gap-16">
+          <div className="flex min-[1100px]:gap-16 min-[928px]:gap-12 gap-6 items-center">
             <div className={styles.search}>
               <input
                 className={styles.input}
@@ -49,6 +49,16 @@ export default function Layout({ children }: { children: ReactNode }) {
             </nav>
             <nav className="flex items-center">
               <ul className="flex gap-4 items-center">
+                {/* <li>
+                  <Image
+                    className="inline-block"
+                    src="images/phone.svg"
+                    alt="phone svg"
+                    width={24}
+                    height={24}
+                  />{" "}
+                  +445 87 999 000
+                </li> */}
                 <li>
                   <Link href="#">
                     <Image
@@ -86,12 +96,20 @@ export default function Layout({ children }: { children: ReactNode }) {
                 </li>
               </ul>
             </nav>
+            {/* <div>
+              <Image
+                src="images/menu.svg"
+                alt="cart svg"
+                width={24}
+                height={24}
+              />
+            </div> */}
           </div>
         </Container>
         <hr className={styles.horizontalRule} />
-        <Container className="justify-between items-center gap-28 h-16">
+        <Container className="justify-between items-center h-16">
           <nav>
-            <ul className="flex gap-6">
+            <ul className="flex max-xl:gap-4 gap-6">
               <li>
                 <Link href="#">The must read</Link>
               </li>
