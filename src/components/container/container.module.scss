@@ -1,0 +1,15 @@
+@import "@/styles/mixins";
+@import "@/styles/breakpoints";
+
+.container {
+  width: 100%;
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex;
+
+  @include media-breakpoint-up($xxl) {
+    max-width: 1440px;
+    padding: 0 100px;
+  }
+}
