@@ -11,7 +11,14 @@ export default function Layout({ children }: { children: ReactNode }) {
       <header>
         <Container className="justify-between h-16 items-center">
           <div className="flex gap-2 items-center">
-            <Link href="/">B-World</Link>
+            <Link href="/">
+              <Image
+                src="images/logo.svg"
+                alt="b world"
+                width={61}
+                height={25}
+              />
+            </Link>
             <span className="inline-block h-[32px] w-[1px] bg-purple-300"></span>
             <span className="inline-block max-w-[60px] text-purple-300 text-xs">
               We love books
@@ -32,7 +39,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               />
             </div>
             <nav className="flex items-center">
-              <ul className="flex gap-6">
+              <ul className="flex lg:gap-6 gap-4">
                 <li>
                   <Link href="#">Privacy Policy</Link>
                 </li>
@@ -48,7 +55,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               </ul>
             </nav>
             <nav className="flex items-center">
-              <ul className="flex gap-4 items-center">
+              <ul className="flex lg:gap-4 gap-2 items-center">
                 {/* <li>
                   <Image
                     className="inline-block"
@@ -107,9 +114,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           </div>
         </Container>
         <hr className={styles.horizontalRule} />
-        <Container className="justify-between items-center h-16">
+        <Container className={styles.primaryNavContainer}>
           <nav>
-            <ul className="flex max-xl:gap-4 gap-6">
+            <ul className={styles.primaryNavList}>
               <li>
                 <Link href="#">The must read</Link>
               </li>
@@ -128,7 +135,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </ul>
           </nav>
           <nav>
-            <ul className="flex gap-6 items-center">
+            <ul className={styles.requestCallList}>
               <li>
                 <Image
                   className="inline-block"

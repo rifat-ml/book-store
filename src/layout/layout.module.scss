@@ -1,23 +1,9 @@
 @import "@/styles/breakpoints";
 @import "@/styles/mixins";
 
-.secondaryNavArea {
-  display: flex;
-}
-
-.requestButton {
-  display: inline-flex;
-  padding: 12.017px 32.044px;
-  border: 1.001px solid var(--purple, #937dc2);
-  justify-content: center;
-  align-items: center;
-  gap: 10.014px;
-  color: var(--purple, #937dc2);
-}
-
 .horizontalRule {
   height: 1px;
-  background: #937dc2;
+  background: var(--purple, #937dc2);
   border: none;
 }
 
@@ -26,7 +12,7 @@
   .input {
     height: 36px;
     border-radius: 2px;
-    background: #f1f1f1;
+    background: var(--light-gray, #f1f1f1);
     text-indent: 16px;
 
     @include media-breakpoint-up($sm) {
@@ -63,5 +49,50 @@
     justify-content: center;
     top: 0;
     right: 0;
+  }
+}
+
+.primaryNavContainer {
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.primaryNavList {
+  display: flex;
+  gap: 10px;
+
+  @include media-breakpoint-up($lg) {
+    gap: 16px;
+  }
+
+  @include media-breakpoint-up($xl) {
+    gap: 24px;
+  }
+}
+
+.requestCallList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include media-breakpoint-up($lg) {
+    gap: 16px;
+  }
+  @include media-breakpoint-up($xl) {
+    gap: 24px;
+  }
+
+  .requestButton {
+    display: inline-flex;
+    padding: 12px 12px;
+    border: 1px solid var(--purple, #937dc2);
+    justify-content: center;
+    align-items: center;
+    color: var(--purple, #937dc2);
+
+    @include media-breakpoint-up($lg) {
+      padding: 12px 32px;
+    }
   }
 }
