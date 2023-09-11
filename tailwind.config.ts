@@ -8,7 +8,12 @@ const config: Config = {
     "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      minWidth: {
+        "560px": "560px",
+        "480px": "480px",
+      },
+    },
   },
   plugins: [],
 };

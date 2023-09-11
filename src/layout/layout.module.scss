@@ -7,30 +7,45 @@
   border: none;
 }
 
-.search {
-  position: relative;
-  .input {
-    height: 36px;
-    border-radius: 2px;
-    background: var(--light-gray, #f1f1f1);
-    text-indent: 16px;
+.input {
+  height: 36px;
+  border-radius: 2px;
+  background: var(--light-gray, #f1f1f1);
+  text-indent: 16px;
+  width: 236px;
 
-    @include media-breakpoint-up($sm) {
-      width: 220px;
-    }
-
-    @include media-breakpoint-up(1100px) {
-      width: 376px;
-    }
-
-    // @include media-breakpoint-between($sm, 940px) {
-    // }
+  @include media-breakpoint-up(1100px) {
+    width: 376px;
   }
-  .icon {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    transform: translate(0, -50%);
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translate(0, -50%);
+}
+
+.secondaryNav {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(928px) {
+    display: none;
+  }
+}
+
+.phone {
+  display: none;
+  @include media-breakpoint-between($md, 928px) {
+    display: block;
+    padding-right: 24px;
+  }
+}
+
+.hamburger {
+  display: none;
+  @include media-breakpoint-down(928px) {
+    display: block;
   }
 }
 
@@ -56,6 +71,9 @@
   justify-content: space-between;
   align-items: center;
   height: 64px;
+  @include media-breakpoint-down(928px) {
+    display: none;
+  }
 }
 
 .primaryNavList {
