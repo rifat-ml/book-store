@@ -1,15 +1,25 @@
 @import "@/styles/mixins";
 
+.verticalLine {
+  @apply inline-block h-[32px] w-[1px];
+  background: theme("colors.purple");
+}
+
+.logoTitle {
+  @apply inline-block text-xs max-w-[60px];
+  color: rgba(147, 125, 194, 0.6);
+}
+
 .horizontalRule {
   height: 1px;
-  background: var(--purple, #937dc2);
+  background: theme("colors.purple");
   border: none;
 }
 
 .input {
   height: 36px;
   border-radius: 2px;
-  background: var(--light-gray, #f1f1f1);
+  background: theme("colors.gray-100");
   text-indent: 16px;
   width: 236px;
 
@@ -17,6 +27,7 @@
     width: 376px;
   }
 }
+
 .icon {
   position: absolute;
   top: 50%;
@@ -27,7 +38,7 @@
 .secondaryNav {
   display: flex;
   align-items: center;
-  color: var(--nav-bar-text, #7b7881);
+  color: theme("colors.gray-300");
 
   @include media-breakpoint-down(928px) {
     display: none;
@@ -57,8 +68,8 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: var(--violet, #c689c6);
-    color: var(--white, #fff);
+    background-color: theme("colors.violet");
+    color: theme("colors.white");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +81,7 @@
 .primaryNavContainer {
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 80px;
   @include media-breakpoint-down(928px) {
     display: none;
   }
@@ -79,7 +90,7 @@
 .primaryNavList {
   display: flex;
   gap: 10px;
-  color: var(--body-text, #4d4c4c);
+  color: theme("colors.gray-400");
 
   @include media-breakpoint-up(theme("screens.lg")) {
     gap: 16px;
@@ -104,11 +115,11 @@
 
   .requestButton {
     display: inline-flex;
-    padding: 12px 12px;
-    border: 1px solid var(--purple, #937dc2);
+    padding: 12px;
+    border: 1px solid theme("colors.purple");
     justify-content: center;
     align-items: center;
-    color: var(--purple, #937dc2);
+    color: theme("colors.purple");
 
     @include media-breakpoint-up(theme("screens.lg")) {
       padding: 12px 32px;

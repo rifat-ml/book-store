@@ -8,6 +8,14 @@ const config: Config = {
     "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      white: "#fff",
+      purple: "#937dc2",
+      "gray-100": "#f1f1f1",
+      "gray-300": "#7b7881",
+      "gray-400": "#7b7881",
+      violet: "#c689c6",
+    },
     extend: {
       minWidth: {
         "560px": "560px",

@@ -2,12 +2,17 @@ import Container from "@/components/container/container";
 import Link from "next/link";
 import { ReactNode } from "react";
 import Image from "next/image";
+import { Inter } from "next/font/google";
 
 import styles from "./layout.module.scss";
 
+const inter = Inter({
+  subsets: ["latin"],
+});
+
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div>
+    <div className={inter.className}>
       <header>
         <Container className="justify-between h-16 items-center">
           <div className="flex gap-2 items-center">
@@ -19,10 +24,8 @@ export default function Layout({ children }: { children: ReactNode }) {
                 height={25}
               />
             </Link>
-            <span className="inline-block h-[32px] w-[1px] bg-purple-300"></span>
-            <span className="inline-block max-w-[60px] text-purple-300 text-xs">
-              We love books
-            </span>
+            <span className={styles.verticalLine}></span>
+            <span className={styles.logoTitle}>We love books</span>
           </div>
           <div className="flex min-[1100px]:gap-16 min-[928px]:gap-12 gap-6 items-center">
             <div className="hidden min-[480px]:block min-[480px]:relative">
@@ -39,7 +42,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               />
             </div>
             <nav className={styles.secondaryNav}>
-              <ul className="flex lg:gap-6 gap-4">
+              <ul className="flex xl:gap-6 gap-4">
                 <li>
                   <Link href="#">Privacy Policy</Link>
                 </li>
@@ -110,7 +113,6 @@ export default function Layout({ children }: { children: ReactNode }) {
         <hr className={styles.horizontalRule} />
       </header>
       {children}
-      <footer></footer>
     </div>
   );
 }
